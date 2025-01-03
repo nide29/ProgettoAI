@@ -1,0 +1,74 @@
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "problem.pddl" done successfully
+# WARNING: Unable to get Instrumentation. Dynamic Attach failed. You may add this JAR as -javaagent manually, or supply -Djdk.attach.allowAttachSelf
+# WARNING: Unable to attach Serviceability Agent. You can try again with escalated privileges. Two options: a) use -Djol.tryWithSudo=true to try with sudo; b) echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+
+problem instantiation done successfully (118 actions, 57 fluents)
+
+* Starting ENFORCED_HILL_CLIMBING search with FAST_FORWARD heuristic 
+* ENFORCED_HILL_CLIMBING search succeeded
+
+found plan as follows:
+
+00: ( load_box_in_warehouse robot1 box1 bolt warehouse) [0]
+01: (          pick_box_from_loc robot1 box1 warehouse) [0]
+02: (            move_robot robot1 warehouse location1) [0]
+03: (            move_robot robot1 location1 location2) [0]
+04: (           enter_workstation robot1 location2 ws2) [0]
+05: (                   drop_box_in_ws robot1 box1 ws2) [0]
+06: (            unload_box_in_ws robot1 box1 ws2 bolt) [0]
+07: (            exit_workstation robot1 location2 ws2) [0]
+08: (            move_robot robot1 location2 location1) [0]
+09: (            move_robot robot1 location1 warehouse) [0]
+10: ( load_box_in_warehouse robot1 box2 bolt warehouse) [0]
+11: ( load_box_in_warehouse robot1 box3 bolt warehouse) [0]
+12: (          pick_box_from_loc robot1 box2 warehouse) [0]
+13: (            move_robot robot1 warehouse location1) [0]
+14: (           enter_workstation robot1 location1 ws1) [0]
+15: (                   drop_box_in_ws robot1 box2 ws1) [0]
+16: (            exit_workstation robot1 location1 ws1) [0]
+17: (            move_robot robot1 location1 warehouse) [0]
+18: (     unload_box_in_loc robot1 box3 bolt warehouse) [0]
+19: (load_box_in_warehouse robot1 box3 valve warehouse) [0]
+20: (          pick_box_from_loc robot1 box3 warehouse) [0]
+21: (            move_robot robot1 warehouse location1) [0]
+22: (           enter_workstation robot1 location1 ws1) [0]
+23: (                   drop_box_in_ws robot1 box3 ws1) [0]
+24: (            unload_box_in_ws robot1 box2 ws1 bolt) [0]
+25: (           unload_box_in_ws robot1 box3 ws1 valve) [0]
+26: (                 pick_box_from_ws robot1 box2 ws1) [0]
+27: (            exit_workstation robot1 location1 ws1) [0]
+28: (            move_robot robot1 location1 warehouse) [0]
+29: (            drop_box_in_loc robot1 box2 warehouse) [0]
+30: ( load_box_in_warehouse robot1 box2 bolt warehouse) [0]
+31: (          pick_box_from_loc robot1 box2 warehouse) [0]
+32: (            move_robot robot1 warehouse location1) [0]
+33: (            move_robot robot1 location1 location2) [0]
+34: (           enter_workstation robot1 location2 ws3) [0]
+35: (                   drop_box_in_ws robot1 box2 ws3) [0]
+36: (            unload_box_in_ws robot1 box2 ws3 bolt) [0]
+37: (                 pick_box_from_ws robot1 box2 ws3) [0]
+38: (            exit_workstation robot1 location2 ws3) [0]
+39: (            move_robot robot1 location2 location1) [0]
+40: (            move_robot robot1 location1 warehouse) [0]
+41: (            drop_box_in_loc robot1 box2 warehouse) [0]
+42: (load_box_in_warehouse robot1 box2 valve warehouse) [0]
+43: (          pick_box_from_loc robot1 box2 warehouse) [0]
+44: (            move_robot robot1 warehouse location1) [0]
+45: (            move_robot robot1 location1 location2) [0]
+46: (           enter_workstation robot1 location2 ws3) [0]
+47: (                   drop_box_in_ws robot1 box2 ws3) [0]
+48: (           unload_box_in_ws robot1 box2 ws3 valve) [0]
+
+time spent:       0,02 seconds parsing 
+                  0,03 seconds encoding 
+                  0,51 seconds searching
+                  0,56 seconds total time
+
+memory used:      0,51 MBytes for problem representation
+                  0,00 MBytes for searching
+                  0,52 MBytes total
+
+

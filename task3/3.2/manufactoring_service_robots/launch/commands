@@ -1,0 +1,56 @@
+set instance ROBOT robot
+
+set instance CARRIER carrier
+
+set instance WAREHOUSE location
+set instance LOCATION1 location
+set instance LOCATION2 location
+
+set instance WORKSTATION1 workstation
+set instance WORKSTATION2 workstation
+set instance WORKSTATION3 workstation
+
+set instance BOX1 box
+set instance BOX2 box
+set instance BOX3 box
+
+set instance BOLT content
+set instance VALVE content
+
+set instance SLOT1 slot
+set instance SLOT2 slot
+set instance SLOT3 slot
+
+set predicate (located_at ROBOT WAREHOUSE)
+
+set predicate (joined ROBOT CARRIER)
+
+set predicate (is_warehouse WAREHOUSE)
+
+set predicate (located_at BOX1 WAREHOUSE)
+set predicate (located_at BOX2 WAREHOUSE)
+set predicate (located_at BOX3 WAREHOUSE)
+
+set predicate (located_at BOLT WAREHOUSE)
+set predicate (located_at VALVE WAREHOUSE)
+
+set predicate (is_empty BOX1)
+set predicate (is_empty BOX2)
+set predicate (is_empty BOX3)
+
+set predicate (located_at WORKSTATION1 LOCATION1)
+set predicate (located_at WORKSTATION2 LOCATION2)
+set predicate (located_at WORKSTATION3 LOCATION2)
+
+set predicate (linked WAREHOUSE LOCATION1)
+set predicate (linked LOCATION1 LOCATION2)
+set predicate (linked LOCATION1 WAREHOUSE)
+set predicate (linked LOCATION2 LOCATION1)
+
+set predicate (handle CARRIER SLOT1)
+set predicate (handle CARRIER SLOT2)
+set predicate (handle CARRIER SLOT3)
+
+set predicate (available SLOT1)
+set predicate (available SLOT2)
+set predicate (available SLOT3)

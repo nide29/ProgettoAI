@@ -1,0 +1,91 @@
+
+
+NUMERIC_THREATS_MODE: 0
+
+; Command line: /home/aiguy/.planutils/packages/lpg-td/bin/lpg-td -o domain.pddl -f problem.pddl -noout -seed 41 -n 3   
+
+
+Parsing domain file:  domain 'GESTIONE_SCARTI' defined ... done.
+Parsing problem file:  problem 'WAREHOUSE_PROBLEM' defined ... done.
+
+
+
+Modality: Incremental Planner
+
+Number of actions             :     118
+Number of conditional actions :       0
+Number of facts               :      64
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: NO
+	Numeric Planning Problem: YES
+	Problem with Timed Initial Literals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+
+Searching ('.' = every 50 search steps):
+........... search limit exceeded. Restart using stored plan
+............. search limit exceeded. Restart using stored plan
+............... search limit exceeded. Restart using null plan
+.................. search limit exceeded. Restart using stored plan
+............. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+.......... found solution of bad quality. Restart using stored plan
+........... found solution of bad quality.
+
+Searching ('.' = every 50 search steps):
+.......... search limit exceeded. Restart using stored plan
+........... search limit exceeded. Restart using stored plan
+............. search limit exceeded. Restart using null plan
+............... search limit exceeded. Restart using stored plan
+.................. search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+........... search limit exceeded. Restart using stored plan
+............. search limit exceeded. Restart using stored plan
+ solution found: 
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (FILLBOXINWAREHOUSE ROBOT BOX3 BOLT WAREHOUSE CARRIER) [D:3.50; C:1.00]
+ 3.5000: (LOADBOXESFROMLOC ROBOT BOX3 WAREHOUSE CARRIER) [D:2.00; C:1.00]
+ 5.5000: (MOVETOLOC ROBOT WAREHOUSE LOCATION1 CARRIER) [D:3.00; C:1.00]
+ 8.5000: (MOVETOLOC ROBOT LOCATION1 LOCATION2 CARRIER) [D:3.00; C:1.00]
+ 11.5000: (ENTERWS ROBOT LOCATION2 WORKSTATION2 CARRIER) [D:0.00; C:1.00]
+ 11.5000: (PUTDOWNBOXINWS ROBOT BOX3 WORKSTATION2 CARRIER) [D:2.00; C:1.00]
+ 13.5000: (EMPTYBOXINWS ROBOT BOX3 WORKSTATION2 BOLT CARRIER) [D:3.50; C:1.00]
+ 15.0000: (LOADBOXESFROMWS ROBOT BOX3 WORKSTATION2 CARRIER) [D:2.00; C:1.00]
+ 17.0000: (EXITWS ROBOT LOCATION2 WORKSTATION2 CARRIER) [D:0.00; C:1.00]
+ 17.0000: (MOVETOLOC ROBOT LOCATION2 LOCATION1 CARRIER) [D:3.00; C:1.00]
+ 20.0000: (MOVETOWAREHOUSE ROBOT LOCATION1 WAREHOUSE CARRIER) [D:3.00; C:1.00]
+ 23.0000: (PUTDOWNBOXINLOC ROBOT BOX3 WAREHOUSE CARRIER) [D:2.00; C:1.00]
+ 23.0000: (FILLBOXINWAREHOUSE ROBOT BOX2 BOLT WAREHOUSE CARRIER) [D:3.50; C:1.00]
+ 25.0000: (FILLBOXINWAREHOUSE ROBOT BOX3 SCREW WAREHOUSE CARRIER) [D:3.50; C:1.00]
+ 26.5000: (LOADBOXESFROMLOC ROBOT BOX2 WAREHOUSE CARRIER) [D:2.00; C:1.00]
+ 28.5000: (LOADBOXESFROMLOC ROBOT BOX3 WAREHOUSE CARRIER) [D:2.00; C:1.00]
+ 30.5000: (MOVETOLOC ROBOT WAREHOUSE LOCATION1 CARRIER) [D:3.00; C:1.00]
+ 33.5000: (MOVETOLOC ROBOT LOCATION1 LOCATION2 CARRIER) [D:3.00; C:1.00]
+ 36.5000: (ENTERWS ROBOT LOCATION2 WORKSTATION3 CARRIER) [D:0.00; C:1.00]
+ 36.5000: (PUTDOWNBOXINWS ROBOT BOX3 WORKSTATION3 CARRIER) [D:2.00; C:1.00]
+ 36.5000: (PUTDOWNBOXINWS ROBOT BOX2 WORKSTATION3 CARRIER) [D:2.00; C:1.00]
+ 38.5000: (EMPTYBOXINWS ROBOT BOX2 WORKSTATION3 BOLT CARRIER) [D:3.50; C:1.00]
+ 38.5000: (EMPTYBOXINWS ROBOT BOX3 WORKSTATION3 SCREW CARRIER) [D:3.50; C:1.00]
+
+
+Solution number: 3
+Total time:      9.88
+Search time:     9.88
+Actions:         23
+Duration:        42.000
+Plan quality:    23.000 
+Total Num Flips: 14353
+
